@@ -11784,15 +11784,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[181]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
 
-<span class="c1"># r = requests.get(&#39;http://api.champion.gg/v2/champions?elo=PLATINUM&amp;champData=kda,damage,averageGames,totalHeal,killingSpree,minions,gold,positions,normalized,groupedWins,trinkets,runes,firstitems,summoners,skills,finalitems,masteries,maxMins,matchups&amp;limit=200&amp;api_key=aa2c48dbf711614fb6f00dc2827b119a&#39;)</span>
-<span class="c1"># x = r.json()</span>
-<span class="c1"># print(pd.DataFrame(x))</span>
 <span class="n">champions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Aatrox&quot;</span><span class="p">,</span><span class="s2">&quot;Ahri&quot;</span><span class="p">,</span><span class="s2">&quot;Akali&quot;</span><span class="p">,</span><span class="s2">&quot;Alistar&quot;</span><span class="p">,</span><span class="s2">&quot;Amumu&quot;</span><span class="p">,</span><span class="s2">&quot;Anivia&quot;</span><span class="p">,</span><span class="s2">&quot;Annie&quot;</span><span class="p">,</span><span class="s2">&quot;Ashe&quot;</span><span class="p">,</span><span class="s2">&quot;AurelionSol&quot;</span><span class="p">,</span><span class="s2">&quot;Azir&quot;</span><span class="p">,</span><span class="s2">&quot;Bard&quot;</span><span class="p">,</span><span class="s2">&quot;Blitzcrank&quot;</span><span class="p">,</span><span class="s2">&quot;Brand&quot;</span><span class="p">,</span>
 <span class="s2">&quot;Braum&quot;</span><span class="p">,</span><span class="s2">&quot;Caitlyn&quot;</span><span class="p">,</span><span class="s2">&quot;Camille&quot;</span><span class="p">,</span><span class="s2">&quot;Cassiopeia&quot;</span><span class="p">,</span><span class="s2">&quot;Chogath&quot;</span><span class="p">,</span><span class="s2">&quot;Corki&quot;</span><span class="p">,</span><span class="s2">&quot;Darius&quot;</span><span class="p">,</span><span class="s2">&quot;Diana&quot;</span><span class="p">,</span><span class="s2">&quot;DrMundo&quot;</span><span class="p">,</span><span class="s2">&quot;Draven&quot;</span><span class="p">,</span><span class="s2">&quot;Ekko&quot;</span><span class="p">,</span><span class="s2">&quot;Elise&quot;</span><span class="p">,</span><span class="s2">&quot;Evelynn&quot;</span><span class="p">,</span>
 <span class="s2">&quot;Ezreal&quot;</span><span class="p">,</span><span class="s2">&quot;Fiddlesticks&quot;</span><span class="p">,</span><span class="s2">&quot;Fiora&quot;</span><span class="p">,</span><span class="s2">&quot;Fizz&quot;</span><span class="p">,</span><span class="s2">&quot;Galio&quot;</span><span class="p">,</span><span class="s2">&quot;Gangplank&quot;</span><span class="p">,</span><span class="s2">&quot;Garen&quot;</span><span class="p">,</span><span class="s2">&quot;Gnar&quot;</span><span class="p">,</span><span class="s2">&quot;Gragas&quot;</span><span class="p">,</span><span class="s2">&quot;Graves&quot;</span><span class="p">,</span><span class="s2">&quot;Hecarim&quot;</span><span class="p">,</span><span class="s2">&quot;Heimerdinger&quot;</span><span class="p">,</span>
@@ -11824,7 +11821,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[181]:</div>
 
 
 
@@ -11991,17 +11988,17 @@ Next, we will be needing the data for each ability, but those are currently all 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[182]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ChampionsData</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
-<span class="n">ChampionsData</span> <span class="o">=</span> <span class="n">ChampionsData</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;allytips&#39;</span><span class="p">,</span> <span class="s1">&#39;blurb&#39;</span><span class="p">,</span> <span class="s1">&#39;enemytips&#39;</span><span class="p">,</span><span class="s1">&#39;image&#39;</span><span class="p">,</span><span class="s1">&#39;partype&#39;</span><span class="p">,</span><span class="s1">&#39;recommended&#39;</span><span class="p">,</span><span class="s1">&#39;skins&#39;</span><span class="p">,</span><span class="s1">&#39;title&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ChampionsData</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span>
+<span class="n">ChampionsData</span> <span class="o">=</span> <span class="n">ChampionsData</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;allytips&#39;</span><span class="p">,</span> <span class="s1">&#39;blurb&#39;</span><span class="p">,</span> <span class="s1">&#39;enemytips&#39;</span><span class="p">,</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;image&#39;</span><span class="p">,</span><span class="s1">&#39;partype&#39;</span><span class="p">,</span><span class="s1">&#39;recommended&#39;</span><span class="p">,</span><span class="s1">&#39;skins&#39;</span><span class="p">,</span><span class="s1">&#39;title&#39;</span><span class="p">])</span>
 <span class="n">ChampionsData</span><span class="p">[</span><span class="s1">&#39;Q&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ChampionsData</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;spells&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">ChampionsData</span><span class="p">[</span><span class="s1">&#39;W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ChampionsData</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;spells&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">ChampionsData</span><span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ChampionsData</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;spells&#39;</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">ChampionsData</span><span class="p">[</span><span class="s1">&#39;R&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ChampionsData</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;spells&#39;</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">ChampionsData</span> <span class="o">=</span> <span class="n">ChampionsData</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;spells&#39;</span><span class="p">])</span>
-<span class="n">ChampionsData</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">ChampionsData</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12014,7 +12011,7 @@ Next, we will be needing the data for each ability, but those are currently all 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+<div class="prompt output_prompt">Out[182]:</div>
 
 
 
@@ -12037,7 +12034,6 @@ Next, we will be needing the data for each ability, but those are currently all 
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>id</th>
       <th>info</th>
       <th>key</th>
       <th>lore</th>
@@ -12054,7 +12050,6 @@ Next, we will be needing the data for each ability, but those are currently all 
   <tbody>
     <tr>
       <th>Aatrox</th>
-      <td>Aatrox</td>
       <td>{'attack': 8, 'defense': 4, 'magic': 3, 'diffi...</td>
       <td>266</td>
       <td>Once honored defenders of Shurima against the ...</td>
@@ -12069,7 +12064,6 @@ Next, we will be needing the data for each ability, but those are currently all 
     </tr>
     <tr>
       <th>Ahri</th>
-      <td>Ahri</td>
       <td>{'attack': 3, 'defense': 4, 'magic': 8, 'diffi...</td>
       <td>103</td>
       <td>Innately connected to the latent power of Rune...</td>
@@ -12084,7 +12078,6 @@ Next, we will be needing the data for each ability, but those are currently all 
     </tr>
     <tr>
       <th>Akali</th>
-      <td>Akali</td>
       <td>{'attack': 5, 'defense': 3, 'magic': 8, 'diffi...</td>
       <td>84</td>
       <td>Abandoning the Kinkou Order and her title of t...</td>
@@ -12099,7 +12092,6 @@ Next, we will be needing the data for each ability, but those are currently all 
     </tr>
     <tr>
       <th>Alistar</th>
-      <td>Alistar</td>
       <td>{'attack': 6, 'defense': 9, 'magic': 5, 'diffi...</td>
       <td>12</td>
       <td>Always a mighty warrior with a fearsome reputa...</td>
@@ -12114,7 +12106,6 @@ Next, we will be needing the data for each ability, but those are currently all 
     </tr>
     <tr>
       <th>Amumu</th>
-      <td>Amumu</td>
       <td>{'attack': 2, 'defense': 6, 'magic': 8, 'diffi...</td>
       <td>32</td>
       <td>Legend claims that Amumu is a lonely and melan...</td>
@@ -12130,6 +12121,1351 @@ Next, we will be needing the data for each ability, but those are currently all 
   </tbody>
 </table>
 </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, for each champion we calculate a "CC Score". This score is calculated by scanning the tooltips for each ability of each champion, looking for keywords that relate to crowd-control. We use the following point values to calculate the score:</p>
+<table>
+<thead><tr>
+<th>Keyword</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  Supress</td>
+<td>3</td>
+</tr>
+<tr>
+<td>  Knock</td>
+<td>3</td>
+</tr>
+<tr>
+<td>  Stun</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td>  Charm</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td>  Snare</td>
+<td>2</td>
+</tr>
+<tr>
+<td>  Entangle</td>
+<td>2</td>
+</tr>
+<tr>
+<td>  Taunt</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>  Pull</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>  Slow</td>
+<td>1</td>
+</tr>
+<tr>
+<td>  Silence</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
+<p>We only count the highest point keyword per ability, so an ability that both slows and knocks up will only get 3 points. Note that this score merely serves as a vague estimate. There are many inaccuracies as we can't know how difficult it is to perform the crowd control, the cost, or the number of champions it can affect at once. We only check that the ability has the capability of performing this crowd control.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[183]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getCCScore</span><span class="p">(</span><span class="n">champion</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span><span class="p">(</span><span class="s1">&#39;supress&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;passive&#39;</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]):</span>
+        <span class="n">result</span><span class="o">+=</span><span class="mi">3</span>
+    <span class="k">elif</span><span class="p">(</span><span class="s1">&#39;knock&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;passive&#39;</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]):</span>
+        <span class="n">result</span><span class="o">+=</span><span class="mi">3</span>
+    <span class="k">elif</span><span class="p">(</span><span class="s1">&#39;stun&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;passive&#39;</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]</span> <span class="ow">or</span> <span class="s1">&#39;charm&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;passive&#39;</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]</span> <span class="p">):</span>
+        <span class="n">result</span><span class="o">+=</span><span class="mf">2.5</span>
+    <span class="k">elif</span><span class="p">(</span><span class="s1">&#39;snare&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;passive&#39;</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]</span> <span class="ow">or</span> <span class="s1">&#39;entangle&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;passive&#39;</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]):</span>
+        <span class="n">result</span><span class="o">+=</span><span class="mi">2</span>
+    <span class="k">elif</span><span class="p">(</span><span class="s1">&#39;taunt&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;passive&#39;</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]</span> <span class="ow">or</span> <span class="s1">&#39;pull&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;passive&#39;</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]):</span>
+        <span class="n">result</span><span class="o">+=</span><span class="mf">1.5</span>
+    <span class="k">elif</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;passive&#39;</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]):</span>
+        <span class="n">result</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">elif</span><span class="p">(</span><span class="s1">&#39;silence&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;passive&#39;</span><span class="p">][</span><span class="s1">&#39;description&#39;</span><span class="p">]):</span>
+        <span class="n">result</span><span class="o">+=.</span><span class="mi">5</span>
+    <span class="k">for</span> <span class="n">ability</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">]:</span>
+        <span class="k">if</span><span class="p">(</span><span class="s1">&#39;supress&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ability</span><span class="p">][</span><span class="s1">&#39;tooltip&#39;</span><span class="p">]):</span>
+            <span class="n">result</span><span class="o">+=</span><span class="mi">3</span>
+        <span class="k">elif</span><span class="p">(</span><span class="s1">&#39;knock&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ability</span><span class="p">][</span><span class="s1">&#39;tooltip&#39;</span><span class="p">]):</span>
+            <span class="n">result</span><span class="o">+=</span><span class="mi">3</span>
+        <span class="k">elif</span><span class="p">(</span><span class="s1">&#39;stun&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ability</span><span class="p">][</span><span class="s1">&#39;tooltip&#39;</span><span class="p">]</span> <span class="ow">or</span> <span class="s1">&#39;charm&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ability</span><span class="p">][</span><span class="s1">&#39;tooltip&#39;</span><span class="p">]</span> <span class="p">):</span>
+            <span class="n">result</span><span class="o">+=</span><span class="mf">2.5</span>
+        <span class="k">elif</span><span class="p">(</span><span class="s1">&#39;snare&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ability</span><span class="p">][</span><span class="s1">&#39;tooltip&#39;</span><span class="p">]</span> <span class="ow">or</span> <span class="s1">&#39;entangle&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ability</span><span class="p">][</span><span class="s1">&#39;tooltip&#39;</span><span class="p">]):</span>
+            <span class="n">result</span><span class="o">+=</span><span class="mi">2</span>
+        <span class="k">elif</span><span class="p">(</span><span class="s1">&#39;taunt&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ability</span><span class="p">][</span><span class="s1">&#39;tooltip&#39;</span><span class="p">]</span> <span class="ow">or</span> <span class="s1">&#39;pull&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ability</span><span class="p">][</span><span class="s1">&#39;tooltip&#39;</span><span class="p">]):</span>
+            <span class="n">result</span><span class="o">+=</span><span class="mf">1.5</span>
+        <span class="k">elif</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ability</span><span class="p">][</span><span class="s1">&#39;tooltip&#39;</span><span class="p">]):</span>
+            <span class="n">result</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">elif</span><span class="p">(</span><span class="s1">&#39;silence&#39;</span> <span class="ow">in</span> <span class="n">champion</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ability</span><span class="p">][</span><span class="s1">&#39;tooltip&#39;</span><span class="p">]):</span>
+            <span class="n">result</span><span class="o">+=.</span><span class="mi">5</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="n">ChampionsData</span><span class="p">[</span><span class="s1">&#39;CC Score&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ChampionsData</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">getCCScore</span><span class="p">(</span><span class="n">row</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ChampionsData</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">ChampionsData</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">])</span>
+<span class="n">ChampionsData</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[183]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>info</th>
+      <th>key</th>
+      <th>lore</th>
+      <th>name</th>
+      <th>passive</th>
+      <th>stats</th>
+      <th>tags</th>
+      <th>Q</th>
+      <th>W</th>
+      <th>E</th>
+      <th>R</th>
+      <th>CC Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Aatrox</th>
+      <td>{'attack': 8, 'defense': 4, 'magic': 3, 'diffi...</td>
+      <td>266</td>
+      <td>Once honored defenders of Shurima against the ...</td>
+      <td>Aatrox</td>
+      <td>{'name': 'Deathbringer Stance', 'description':...</td>
+      <td>{'hp': 580, 'hpperlevel': 80, 'mp': 0, 'mpperl...</td>
+      <td>[Fighter, Tank]</td>
+      <td>{'id': 'AatroxQ', 'name': 'The Darkin Blade', ...</td>
+      <td>{'id': 'AatroxW', 'name': 'Infernal Chains', '...</td>
+      <td>{'id': 'AatroxE', 'name': 'Umbral Dash', 'desc...</td>
+      <td>{'id': 'AatroxR', 'name': 'World Ender', 'desc...</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>Ahri</th>
+      <td>{'attack': 3, 'defense': 4, 'magic': 8, 'diffi...</td>
+      <td>103</td>
+      <td>Innately connected to the latent power of Rune...</td>
+      <td>Ahri</td>
+      <td>{'name': 'Vastayan Grace', 'description': 'Whe...</td>
+      <td>{'hp': 526, 'hpperlevel': 92, 'mp': 418, 'mppe...</td>
+      <td>[Mage, Assassin]</td>
+      <td>{'id': 'AhriOrbofDeception', 'name': 'Orb of D...</td>
+      <td>{'id': 'AhriFoxFire', 'name': 'Fox-Fire', 'des...</td>
+      <td>{'id': 'AhriSeduce', 'name': 'Charm', 'descrip...</td>
+      <td>{'id': 'AhriTumble', 'name': 'Spirit Rush', 'd...</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <th>Akali</th>
+      <td>{'attack': 5, 'defense': 3, 'magic': 8, 'diffi...</td>
+      <td>84</td>
+      <td>Abandoning the Kinkou Order and her title of t...</td>
+      <td>Akali</td>
+      <td>{'name': 'Assassin's Mark', 'description': 'De...</td>
+      <td>{'hp': 550, 'hpperlevel': 85, 'mp': 200, 'mppe...</td>
+      <td>[Assassin]</td>
+      <td>{'id': 'AkaliQ', 'name': 'Five Point Strike', ...</td>
+      <td>{'id': 'AkaliW', 'name': 'Twilight Shroud', 'd...</td>
+      <td>{'id': 'AkaliE', 'name': 'Shuriken Flip', 'des...</td>
+      <td>{'id': 'AkaliR', 'name': 'Perfect Execution', ...</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>Alistar</th>
+      <td>{'attack': 6, 'defense': 9, 'magic': 5, 'diffi...</td>
+      <td>12</td>
+      <td>Always a mighty warrior with a fearsome reputa...</td>
+      <td>Alistar</td>
+      <td>{'name': 'Triumphant Roar', 'description': 'Al...</td>
+      <td>{'hp': 573.36, 'hpperlevel': 106, 'mp': 278.84...</td>
+      <td>[Tank, Support]</td>
+      <td>{'id': 'Pulverize', 'name': 'Pulverize', 'desc...</td>
+      <td>{'id': 'Headbutt', 'name': 'Headbutt', 'descri...</td>
+      <td>{'id': 'AlistarE', 'name': 'Trample', 'descrip...</td>
+      <td>{'id': 'FerociousHowl', 'name': 'Unbreakable W...</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>Amumu</th>
+      <td>{'attack': 2, 'defense': 6, 'magic': 8, 'diffi...</td>
+      <td>32</td>
+      <td>Legend claims that Amumu is a lonely and melan...</td>
+      <td>Amumu</td>
+      <td>{'name': 'Cursed Touch', 'description': 'Amumu...</td>
+      <td>{'hp': 613.12, 'hpperlevel': 84, 'mp': 287.2, ...</td>
+      <td>[Tank, Mage]</td>
+      <td>{'id': 'BandageToss', 'name': 'Bandage Toss', ...</td>
+      <td>{'id': 'AuraofDespair', 'name': 'Despair', 'de...</td>
+      <td>{'id': 'Tantrum', 'name': 'Tantrum', 'descript...</td>
+      <td>{'id': 'CurseoftheSadMummy', 'name': 'Curse of...</td>
+      <td>4.5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we will start looking at some match data. We can get this by performing a GET request on champion.gg's API. First we will get the data and save it to a DataFrame called winrates. Since champion.gg stores separate data for each role for each champion, I do a groupby to keep only the highest winrate role for each champion. I then join the winrates table with ChampionsData, to add a new winrate column for each champion.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[186]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://api.champion.gg/v2/champions?elo=BRONZE&amp;champData=winRate&amp;limit=2000&amp;api_key=aa2c48dbf711614fb6f00dc2827b119a&#39;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="n">winrates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;championId&#39;</span><span class="p">])</span>
+<span class="n">winrates</span><span class="o">=</span><span class="n">winrates</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;banRate&#39;</span><span class="p">,</span><span class="s1">&#39;elo&#39;</span><span class="p">,</span><span class="s1">&#39;gamesPlayed&#39;</span><span class="p">,</span><span class="s1">&#39;patch&#39;</span><span class="p">])</span>
+<span class="n">winrates</span> <span class="o">=</span> <span class="n">winrates</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;championId&#39;</span><span class="p">])[</span><span class="s1">&#39;winRate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="n">ChampionsData</span> <span class="o">=</span> <span class="n">ChampionsData</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">winrates</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;key&#39;</span><span class="p">)</span>
+<span class="n">ChampionsData</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[186]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>info</th>
+      <th>key</th>
+      <th>lore</th>
+      <th>name</th>
+      <th>passive</th>
+      <th>stats</th>
+      <th>tags</th>
+      <th>Q</th>
+      <th>W</th>
+      <th>E</th>
+      <th>R</th>
+      <th>CC Score</th>
+      <th>winRate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Aatrox</th>
+      <td>{'attack': 8, 'defense': 4, 'magic': 3, 'diffi...</td>
+      <td>266</td>
+      <td>Once honored defenders of Shurima against the ...</td>
+      <td>Aatrox</td>
+      <td>{'name': 'Deathbringer Stance', 'description':...</td>
+      <td>{'hp': 580, 'hpperlevel': 80, 'mp': 0, 'mpperl...</td>
+      <td>[Fighter, Tank]</td>
+      <td>{'id': 'AatroxQ', 'name': 'The Darkin Blade', ...</td>
+      <td>{'id': 'AatroxW', 'name': 'Infernal Chains', '...</td>
+      <td>{'id': 'AatroxE', 'name': 'Umbral Dash', 'desc...</td>
+      <td>{'id': 'AatroxR', 'name': 'World Ender', 'desc...</td>
+      <td>4.0</td>
+      <td>0.485863</td>
+    </tr>
+    <tr>
+      <th>Ahri</th>
+      <td>{'attack': 3, 'defense': 4, 'magic': 8, 'diffi...</td>
+      <td>103</td>
+      <td>Innately connected to the latent power of Rune...</td>
+      <td>Ahri</td>
+      <td>{'name': 'Vastayan Grace', 'description': 'Whe...</td>
+      <td>{'hp': 526, 'hpperlevel': 92, 'mp': 418, 'mppe...</td>
+      <td>[Mage, Assassin]</td>
+      <td>{'id': 'AhriOrbofDeception', 'name': 'Orb of D...</td>
+      <td>{'id': 'AhriFoxFire', 'name': 'Fox-Fire', 'des...</td>
+      <td>{'id': 'AhriSeduce', 'name': 'Charm', 'descrip...</td>
+      <td>{'id': 'AhriTumble', 'name': 'Spirit Rush', 'd...</td>
+      <td>2.5</td>
+      <td>0.520434</td>
+    </tr>
+    <tr>
+      <th>Akali</th>
+      <td>{'attack': 5, 'defense': 3, 'magic': 8, 'diffi...</td>
+      <td>84</td>
+      <td>Abandoning the Kinkou Order and her title of t...</td>
+      <td>Akali</td>
+      <td>{'name': 'Assassin's Mark', 'description': 'De...</td>
+      <td>{'hp': 550, 'hpperlevel': 85, 'mp': 200, 'mppe...</td>
+      <td>[Assassin]</td>
+      <td>{'id': 'AkaliQ', 'name': 'Five Point Strike', ...</td>
+      <td>{'id': 'AkaliW', 'name': 'Twilight Shroud', 'd...</td>
+      <td>{'id': 'AkaliE', 'name': 'Shuriken Flip', 'des...</td>
+      <td>{'id': 'AkaliR', 'name': 'Perfect Execution', ...</td>
+      <td>3.5</td>
+      <td>0.449523</td>
+    </tr>
+    <tr>
+      <th>Alistar</th>
+      <td>{'attack': 6, 'defense': 9, 'magic': 5, 'diffi...</td>
+      <td>12</td>
+      <td>Always a mighty warrior with a fearsome reputa...</td>
+      <td>Alistar</td>
+      <td>{'name': 'Triumphant Roar', 'description': 'Al...</td>
+      <td>{'hp': 573.36, 'hpperlevel': 106, 'mp': 278.84...</td>
+      <td>[Tank, Support]</td>
+      <td>{'id': 'Pulverize', 'name': 'Pulverize', 'desc...</td>
+      <td>{'id': 'Headbutt', 'name': 'Headbutt', 'descri...</td>
+      <td>{'id': 'AlistarE', 'name': 'Trample', 'descrip...</td>
+      <td>{'id': 'FerociousHowl', 'name': 'Unbreakable W...</td>
+      <td>8.0</td>
+      <td>0.488874</td>
+    </tr>
+    <tr>
+      <th>Amumu</th>
+      <td>{'attack': 2, 'defense': 6, 'magic': 8, 'diffi...</td>
+      <td>32</td>
+      <td>Legend claims that Amumu is a lonely and melan...</td>
+      <td>Amumu</td>
+      <td>{'name': 'Cursed Touch', 'description': 'Amumu...</td>
+      <td>{'hp': 613.12, 'hpperlevel': 84, 'mp': 287.2, ...</td>
+      <td>[Tank, Mage]</td>
+      <td>{'id': 'BandageToss', 'name': 'Bandage Toss', ...</td>
+      <td>{'id': 'AuraofDespair', 'name': 'Despair', 'de...</td>
+      <td>{'id': 'Tantrum', 'name': 'Tantrum', 'descript...</td>
+      <td>{'id': 'CurseoftheSadMummy', 'name': 'Curse of...</td>
+      <td>4.5</td>
+      <td>0.534207</td>
+    </tr>
+    <tr>
+      <th>Anivia</th>
+      <td>{'attack': 1, 'defense': 4, 'magic': 10, 'diff...</td>
+      <td>34</td>
+      <td>Anivia is a benevolent winged spirit who endur...</td>
+      <td>Anivia</td>
+      <td>{'name': 'Rebirth', 'description': 'Upon dying...</td>
+      <td>{'hp': 480, 'hpperlevel': 82, 'mp': 495, 'mppe...</td>
+      <td>[Mage, Support]</td>
+      <td>{'id': 'FlashFrost', 'name': 'Flash Frost', 'd...</td>
+      <td>{'id': 'Crystallize', 'name': 'Crystallize', '...</td>
+      <td>{'id': 'Frostbite', 'name': 'Frostbite', 'desc...</td>
+      <td>{'id': 'GlacialStorm', 'name': 'Glacial Storm'...</td>
+      <td>6.0</td>
+      <td>0.500000</td>
+    </tr>
+    <tr>
+      <th>Annie</th>
+      <td>{'attack': 2, 'defense': 3, 'magic': 10, 'diff...</td>
+      <td>1</td>
+      <td>Dangerous, yet disarmingly precocious, Annie i...</td>
+      <td>Annie</td>
+      <td>{'name': 'Pyromania', 'description': 'After ca...</td>
+      <td>{'hp': 524, 'hpperlevel': 88, 'mp': 418, 'mppe...</td>
+      <td>[Mage]</td>
+      <td>{'id': 'AnnieQ', 'name': 'Disintegrate', 'desc...</td>
+      <td>{'id': 'AnnieW', 'name': 'Incinerate', 'descri...</td>
+      <td>{'id': 'AnnieE', 'name': 'Molten Shield', 'des...</td>
+      <td>{'id': 'AnnieR', 'name': 'Summon: Tibbers', 'd...</td>
+      <td>2.5</td>
+      <td>0.526074</td>
+    </tr>
+    <tr>
+      <th>Ashe</th>
+      <td>{'attack': 7, 'defense': 3, 'magic': 2, 'diffi...</td>
+      <td>22</td>
+      <td>Iceborn warmother of the Avarosan tribe, Ashe ...</td>
+      <td>Ashe</td>
+      <td>{'name': 'Frost Shot', 'description': 'Ashe's ...</td>
+      <td>{'hp': 539, 'hpperlevel': 85, 'mp': 280, 'mppe...</td>
+      <td>[Marksman, Support]</td>
+      <td>{'id': 'AsheQ', 'name': 'Ranger's Focus', 'des...</td>
+      <td>{'id': 'Volley', 'name': 'Volley', 'descriptio...</td>
+      <td>{'id': 'AsheSpiritOfTheHawk', 'name': 'Hawksho...</td>
+      <td>{'id': 'EnchantedCrystalArrow', 'name': 'Encha...</td>
+      <td>3.5</td>
+      <td>0.514422</td>
+    </tr>
+    <tr>
+      <th>AurelionSol</th>
+      <td>{'attack': 2, 'defense': 3, 'magic': 8, 'diffi...</td>
+      <td>136</td>
+      <td>Aurelion Sol once graced the vast emptiness of...</td>
+      <td>Aurelion Sol</td>
+      <td>{'name': 'Center of the Universe', 'descriptio...</td>
+      <td>{'hp': 510, 'hpperlevel': 92, 'mp': 350, 'mppe...</td>
+      <td>[Mage, Fighter]</td>
+      <td>{'id': 'AurelionSolQ', 'name': 'Starsurge', 'd...</td>
+      <td>{'id': 'AurelionSolW', 'name': 'Celestial Expa...</td>
+      <td>{'id': 'AurelionSolE', 'name': 'Comet of Legen...</td>
+      <td>{'id': 'AurelionSolR', 'name': 'Voice of Light...</td>
+      <td>5.5</td>
+      <td>0.477950</td>
+    </tr>
+    <tr>
+      <th>Azir</th>
+      <td>{'attack': 6, 'defense': 3, 'magic': 8, 'diffi...</td>
+      <td>268</td>
+      <td>Azir was a mortal emperor of Shurima in a far ...</td>
+      <td>Azir</td>
+      <td>{'name': 'Shurima's Legacy', 'description': 'A...</td>
+      <td>{'hp': 552, 'hpperlevel': 92, 'mp': 438, 'mppe...</td>
+      <td>[Mage, Marksman]</td>
+      <td>{'id': 'AzirQWrapper', 'name': 'Conquering San...</td>
+      <td>{'id': 'AzirW', 'name': 'Arise!', 'description...</td>
+      <td>{'id': 'AzirEWrapper', 'name': 'Shifting Sands...</td>
+      <td>{'id': 'AzirR', 'name': 'Emperor's Divide', 'd...</td>
+      <td>4.0</td>
+      <td>0.435159</td>
+    </tr>
+    <tr>
+      <th>Bard</th>
+      <td>{'attack': 4, 'defense': 4, 'magic': 5, 'diffi...</td>
+      <td>432</td>
+      <td>A traveler from beyond the stars, Bard is an a...</td>
+      <td>Bard</td>
+      <td>{'name': 'Traveler's Call', 'description': 'Ba...</td>
+      <td>{'hp': 535, 'hpperlevel': 89, 'mp': 350, 'mppe...</td>
+      <td>[Support, Mage]</td>
+      <td>{'id': 'BardQ', 'name': 'Cosmic Binding', 'des...</td>
+      <td>{'id': 'BardW', 'name': 'Caretaker's Shrine', ...</td>
+      <td>{'id': 'BardE', 'name': 'Magical Journey', 'de...</td>
+      <td>{'id': 'BardR', 'name': 'Tempered Fate', 'desc...</td>
+      <td>2.5</td>
+      <td>0.482372</td>
+    </tr>
+    <tr>
+      <th>Blitzcrank</th>
+      <td>{'attack': 4, 'defense': 8, 'magic': 5, 'diffi...</td>
+      <td>53</td>
+      <td>Blitzcrank is an enormous, near-indestructible...</td>
+      <td>Blitzcrank</td>
+      <td>{'name': 'Mana Barrier', 'description': 'When ...</td>
+      <td>{'hp': 582.6, 'hpperlevel': 95, 'mp': 267.2, '...</td>
+      <td>[Tank, Fighter]</td>
+      <td>{'id': 'RocketGrab', 'name': 'Rocket Grab', 'd...</td>
+      <td>{'id': 'Overdrive', 'name': 'Overdrive', 'desc...</td>
+      <td>{'id': 'PowerFist', 'name': 'Power Fist', 'des...</td>
+      <td>{'id': 'StaticField', 'name': 'Static Field', ...</td>
+      <td>4.0</td>
+      <td>0.523688</td>
+    </tr>
+    <tr>
+      <th>Brand</th>
+      <td>{'attack': 2, 'defense': 2, 'magic': 9, 'diffi...</td>
+      <td>63</td>
+      <td>Once a tribesman of the icy Freljord named Keg...</td>
+      <td>Brand</td>
+      <td>{'name': 'Blaze', 'description': 'Brand's spel...</td>
+      <td>{'hp': 519.68, 'hpperlevel': 88, 'mp': 469, 'm...</td>
+      <td>[Mage]</td>
+      <td>{'id': 'BrandQ', 'name': 'Sear', 'description'...</td>
+      <td>{'id': 'BrandW', 'name': 'Pillar of Flame', 'd...</td>
+      <td>{'id': 'BrandE', 'name': 'Conflagration', 'des...</td>
+      <td>{'id': 'BrandR', 'name': 'Pyroclasm', 'descrip...</td>
+      <td>3.5</td>
+      <td>0.545568</td>
+    </tr>
+    <tr>
+      <th>Braum</th>
+      <td>{'attack': 3, 'defense': 9, 'magic': 4, 'diffi...</td>
+      <td>201</td>
+      <td>Blessed with massive biceps and an even bigger...</td>
+      <td>Braum</td>
+      <td>{'name': 'Concussive Blows', 'description': 'B...</td>
+      <td>{'hp': 540, 'hpperlevel': 87, 'mp': 310.6, 'mp...</td>
+      <td>[Support, Tank]</td>
+      <td>{'id': 'BraumQ', 'name': 'Winter's Bite', 'des...</td>
+      <td>{'id': 'BraumW', 'name': 'Stand Behind Me', 'd...</td>
+      <td>{'id': 'BraumE', 'name': 'Unbreakable', 'descr...</td>
+      <td>{'id': 'BraumRWrapper', 'name': 'Glacial Fissu...</td>
+      <td>6.5</td>
+      <td>0.479457</td>
+    </tr>
+    <tr>
+      <th>Caitlyn</th>
+      <td>{'attack': 8, 'defense': 2, 'magic': 2, 'diffi...</td>
+      <td>51</td>
+      <td>Renowned as its finest peacekeeper, Caitlyn is...</td>
+      <td>Caitlyn</td>
+      <td>{'name': 'Headshot', 'description': 'Every few...</td>
+      <td>{'hp': 481, 'hpperlevel': 91, 'mp': 313.7, 'mp...</td>
+      <td>[Marksman]</td>
+      <td>{'id': 'CaitlynPiltoverPeacemaker', 'name': 'P...</td>
+      <td>{'id': 'CaitlynYordleTrap', 'name': 'Yordle Sn...</td>
+      <td>{'id': 'CaitlynEntrapment', 'name': '90 Calibe...</td>
+      <td>{'id': 'CaitlynAceintheHole', 'name': 'Ace in ...</td>
+      <td>3.0</td>
+      <td>0.489252</td>
+    </tr>
+    <tr>
+      <th>Camille</th>
+      <td>{'attack': 8, 'defense': 6, 'magic': 3, 'diffi...</td>
+      <td>164</td>
+      <td>Weaponized to operate outside the boundaries o...</td>
+      <td>Camille</td>
+      <td>{'name': 'Adaptive Defenses', 'description': '...</td>
+      <td>{'hp': 575.6, 'hpperlevel': 85, 'mp': 338.8, '...</td>
+      <td>[Fighter, Tank]</td>
+      <td>{'id': 'CamilleQ', 'name': 'Precision Protocol...</td>
+      <td>{'id': 'CamilleW', 'name': 'Tactical Sweep', '...</td>
+      <td>{'id': 'CamilleE', 'name': 'Hookshot', 'descri...</td>
+      <td>{'id': 'CamilleR', 'name': 'The Hextech Ultima...</td>
+      <td>6.5</td>
+      <td>0.492918</td>
+    </tr>
+    <tr>
+      <th>Cassiopeia</th>
+      <td>{'attack': 2, 'defense': 3, 'magic': 9, 'diffi...</td>
+      <td>69</td>
+      <td>Cassiopeia is a deadly creature bent on manipu...</td>
+      <td>Cassiopeia</td>
+      <td>{'name': 'Serpentine Grace', 'description': 'C...</td>
+      <td>{'hp': 537, 'hpperlevel': 87, 'mp': 418, 'mppe...</td>
+      <td>[Mage]</td>
+      <td>{'id': 'CassiopeiaQ', 'name': 'Noxious Blast',...</td>
+      <td>{'id': 'CassiopeiaW', 'name': 'Miasma', 'descr...</td>
+      <td>{'id': 'CassiopeiaE', 'name': 'Twin Fang', 'de...</td>
+      <td>{'id': 'CassiopeiaR', 'name': 'Petrifying Gaze...</td>
+      <td>3.5</td>
+      <td>0.529091</td>
+    </tr>
+    <tr>
+      <th>Chogath</th>
+      <td>{'attack': 3, 'defense': 7, 'magic': 7, 'diffi...</td>
+      <td>31</td>
+      <td>From the moment Cho'Gath first emerged into th...</td>
+      <td>Cho'Gath</td>
+      <td>{'name': 'Carnivore', 'description': 'Whenever...</td>
+      <td>{'hp': 574.4, 'hpperlevel': 80, 'mp': 272.2, '...</td>
+      <td>[Tank, Mage]</td>
+      <td>{'id': 'Rupture', 'name': 'Rupture', 'descript...</td>
+      <td>{'id': 'FeralScream', 'name': 'Feral Scream', ...</td>
+      <td>{'id': 'VorpalSpikes', 'name': 'Vorpal Spikes'...</td>
+      <td>{'id': 'Feast', 'name': 'Feast', 'description'...</td>
+      <td>2.0</td>
+      <td>0.497784</td>
+    </tr>
+    <tr>
+      <th>Corki</th>
+      <td>{'attack': 8, 'defense': 3, 'magic': 6, 'diffi...</td>
+      <td>42</td>
+      <td>The yordle pilot Corki loves two things above ...</td>
+      <td>Corki</td>
+      <td>{'name': 'Hextech Munitions', 'description': '...</td>
+      <td>{'hp': 518, 'hpperlevel': 87, 'mp': 350.16, 'm...</td>
+      <td>[Marksman]</td>
+      <td>{'id': 'PhosphorusBomb', 'name': 'Phosphorus B...</td>
+      <td>{'id': 'CarpetBomb', 'name': 'Valkyrie', 'desc...</td>
+      <td>{'id': 'GGun', 'name': 'Gatling Gun', 'descrip...</td>
+      <td>{'id': 'MissileBarrage', 'name': 'Missile Barr...</td>
+      <td>3.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Darius</th>
+      <td>{'attack': 9, 'defense': 5, 'magic': 1, 'diffi...</td>
+      <td>122</td>
+      <td>There is no greater symbol of Noxian might tha...</td>
+      <td>Darius</td>
+      <td>{'name': 'Hemorrhage', 'description': 'Darius ...</td>
+      <td>{'hp': 582.24, 'hpperlevel': 100, 'mp': 263, '...</td>
+      <td>[Fighter, Tank]</td>
+      <td>{'id': 'DariusCleave', 'name': 'Decimate', 'de...</td>
+      <td>{'id': 'DariusNoxianTacticsONH', 'name': 'Crip...</td>
+      <td>{'id': 'DariusAxeGrabCone', 'name': 'Apprehend...</td>
+      <td>{'id': 'DariusExecute', 'name': 'Noxian Guillo...</td>
+      <td>2.0</td>
+      <td>0.484779</td>
+    </tr>
+    <tr>
+      <th>Diana</th>
+      <td>{'attack': 7, 'defense': 6, 'magic': 8, 'diffi...</td>
+      <td>131</td>
+      <td>Bearing her crescent moonblade, Diana fights a...</td>
+      <td>Diana</td>
+      <td>{'name': 'Moonsilver Blade', 'description': 'E...</td>
+      <td>{'hp': 594, 'hpperlevel': 95, 'mp': 372, 'mppe...</td>
+      <td>[Fighter, Mage]</td>
+      <td>{'id': 'DianaArc', 'name': 'Crescent Strike', ...</td>
+      <td>{'id': 'DianaOrbs', 'name': 'Pale Cascade', 'd...</td>
+      <td>{'id': 'DianaVortex', 'name': 'Moonfall', 'des...</td>
+      <td>{'id': 'DianaTeleport', 'name': 'Lunar Rush', ...</td>
+      <td>1.0</td>
+      <td>0.520241</td>
+    </tr>
+    <tr>
+      <th>DrMundo</th>
+      <td>{'attack': 5, 'defense': 7, 'magic': 6, 'diffi...</td>
+      <td>36</td>
+      <td>Utterly insane, unrepentantly homicidal, and h...</td>
+      <td>Dr. Mundo</td>
+      <td>{'name': 'Adrenaline Rush', 'description': 'Dr...</td>
+      <td>{'hp': 582.52, 'hpperlevel': 89, 'mp': 0, 'mpp...</td>
+      <td>[Fighter, Tank]</td>
+      <td>{'id': 'InfectedCleaverMissileCast', 'name': '...</td>
+      <td>{'id': 'BurningAgony', 'name': 'Burning Agony'...</td>
+      <td>{'id': 'Masochism', 'name': 'Masochism', 'desc...</td>
+      <td>{'id': 'Sadism', 'name': 'Sadism', 'descriptio...</td>
+      <td>1.0</td>
+      <td>0.505420</td>
+    </tr>
+    <tr>
+      <th>Draven</th>
+      <td>{'attack': 9, 'defense': 3, 'magic': 1, 'diffi...</td>
+      <td>119</td>
+      <td>In Noxus, warriors known as Reckoners face one...</td>
+      <td>Draven</td>
+      <td>{'name': 'League of Draven', 'description': 'D...</td>
+      <td>{'hp': 574, 'hpperlevel': 88, 'mp': 360.56, 'm...</td>
+      <td>[Marksman]</td>
+      <td>{'id': 'DravenSpinning', 'name': 'Spinning Axe...</td>
+      <td>{'id': 'DravenFury', 'name': 'Blood Rush', 'de...</td>
+      <td>{'id': 'DravenDoubleShot', 'name': 'Stand Asid...</td>
+      <td>{'id': 'DravenRCast', 'name': 'Whirling Death'...</td>
+      <td>4.0</td>
+      <td>0.497311</td>
+    </tr>
+    <tr>
+      <th>Ekko</th>
+      <td>{'attack': 5, 'defense': 3, 'magic': 7, 'diffi...</td>
+      <td>245</td>
+      <td>A prodigy from the rough streets of Zaun, Ekko...</td>
+      <td>Ekko</td>
+      <td>{'name': 'Z-Drive Resonance', 'description': '...</td>
+      <td>{'hp': 585, 'hpperlevel': 85, 'mp': 280, 'mppe...</td>
+      <td>[Assassin, Fighter]</td>
+      <td>{'id': 'EkkoQ', 'name': 'Timewinder', 'descrip...</td>
+      <td>{'id': 'EkkoW', 'name': 'Parallel Convergence'...</td>
+      <td>{'id': 'EkkoE', 'name': 'Phase Dive', 'descrip...</td>
+      <td>{'id': 'EkkoR', 'name': 'Chronobreak', 'descri...</td>
+      <td>3.5</td>
+      <td>0.524640</td>
+    </tr>
+    <tr>
+      <th>Elise</th>
+      <td>{'attack': 6, 'defense': 5, 'magic': 7, 'diffi...</td>
+      <td>60</td>
+      <td>Elise is a deadly predator who dwells in a shu...</td>
+      <td>Elise</td>
+      <td>{'name': 'Spider Queen', 'description': 'Human...</td>
+      <td>{'hp': 534, 'hpperlevel': 93, 'mp': 324, 'mppe...</td>
+      <td>[Mage, Fighter]</td>
+      <td>{'id': 'EliseHumanQ', 'name': 'Neurotoxin / Ve...</td>
+      <td>{'id': 'EliseHumanW', 'name': 'Volatile Spider...</td>
+      <td>{'id': 'EliseHumanE', 'name': 'Cocoon / Rappel...</td>
+      <td>{'id': 'EliseR', 'name': 'Spider Form', 'descr...</td>
+      <td>0.0</td>
+      <td>0.495103</td>
+    </tr>
+    <tr>
+      <th>Evelynn</th>
+      <td>{'attack': 4, 'defense': 2, 'magic': 7, 'diffi...</td>
+      <td>28</td>
+      <td>Within the dark seams of Runeterra, the demon ...</td>
+      <td>Evelynn</td>
+      <td>{'name': 'Demon Shade', 'description': 'When o...</td>
+      <td>{'hp': 572, 'hpperlevel': 84, 'mp': 315.6, 'mp...</td>
+      <td>[Assassin, Mage]</td>
+      <td>{'id': 'EvelynnQ', 'name': 'Hate Spike', 'desc...</td>
+      <td>{'id': 'EvelynnW', 'name': 'Allure', 'descript...</td>
+      <td>{'id': 'EvelynnE', 'name': 'Whiplash', 'descri...</td>
+      <td>{'id': 'EvelynnR', 'name': 'Last Caress', 'des...</td>
+      <td>2.5</td>
+      <td>0.483432</td>
+    </tr>
+    <tr>
+      <th>Ezreal</th>
+      <td>{'attack': 7, 'defense': 2, 'magic': 6, 'diffi...</td>
+      <td>81</td>
+      <td>A dashing adventurer, unknowingly gifted in th...</td>
+      <td>Ezreal</td>
+      <td>{'name': 'Rising Spell Force', 'description': ...</td>
+      <td>{'hp': 491, 'hpperlevel': 86, 'mp': 360.6, 'mp...</td>
+      <td>[Marksman, Mage]</td>
+      <td>{'id': 'EzrealQ', 'name': 'Mystic Shot', 'desc...</td>
+      <td>{'id': 'EzrealW', 'name': 'Essence Flux', 'des...</td>
+      <td>{'id': 'EzrealE', 'name': 'Arcane Shift', 'des...</td>
+      <td>{'id': 'EzrealR', 'name': 'Trueshot Barrage', ...</td>
+      <td>0.0</td>
+      <td>0.483910</td>
+    </tr>
+    <tr>
+      <th>Fiddlesticks</th>
+      <td>{'attack': 2, 'defense': 3, 'magic': 9, 'diffi...</td>
+      <td>9</td>
+      <td>Fiddlesticks is a ghastly, living scarecrow wh...</td>
+      <td>Fiddlesticks</td>
+      <td>{'name': 'Dread', 'description': 'Standing sti...</td>
+      <td>{'hp': 524.4, 'hpperlevel': 80, 'mp': 500, 'mp...</td>
+      <td>[Mage, Support]</td>
+      <td>{'id': 'Terrify', 'name': 'Terrify', 'descript...</td>
+      <td>{'id': 'Drain', 'name': 'Drain', 'description'...</td>
+      <td>{'id': 'FiddlesticksDarkWind', 'name': 'Dark W...</td>
+      <td>{'id': 'Crowstorm', 'name': 'Crowstorm', 'desc...</td>
+      <td>0.5</td>
+      <td>0.527931</td>
+    </tr>
+    <tr>
+      <th>Fiora</th>
+      <td>{'attack': 10, 'defense': 4, 'magic': 2, 'diff...</td>
+      <td>114</td>
+      <td>The most feared duelist in all Valoran, Fiora ...</td>
+      <td>Fiora</td>
+      <td>{'name': 'Duelist's Dance', 'description': 'Fi...</td>
+      <td>{'hp': 550, 'hpperlevel': 85, 'mp': 300, 'mppe...</td>
+      <td>[Fighter, Assassin]</td>
+      <td>{'id': 'FioraQ', 'name': 'Lunge', 'description...</td>
+      <td>{'id': 'FioraW', 'name': 'Riposte', 'descripti...</td>
+      <td>{'id': 'FioraE', 'name': 'Bladework', 'descrip...</td>
+      <td>{'id': 'FioraR', 'name': 'Grand Challenge', 'd...</td>
+      <td>3.5</td>
+      <td>0.494488</td>
+    </tr>
+    <tr>
+      <th>Fizz</th>
+      <td>{'attack': 6, 'defense': 4, 'magic': 7, 'diffi...</td>
+      <td>105</td>
+      <td>Fizz is an amphibious yordle, who dwells among...</td>
+      <td>Fizz</td>
+      <td>{'name': 'Nimble Fighter', 'description': 'Fiz...</td>
+      <td>{'hp': 570, 'hpperlevel': 98, 'mp': 317.2, 'mp...</td>
+      <td>[Assassin, Fighter]</td>
+      <td>{'id': 'FizzQ', 'name': 'Urchin Strike', 'desc...</td>
+      <td>{'id': 'FizzW', 'name': 'Seastone Trident', 'd...</td>
+      <td>{'id': 'FizzE', 'name': 'Playful / Trickster',...</td>
+      <td>{'id': 'FizzR', 'name': 'Chum the Waters', 'de...</td>
+      <td>4.0</td>
+      <td>0.515355</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Teemo</th>
+      <td>{'attack': 5, 'defense': 3, 'magic': 7, 'diffi...</td>
+      <td>17</td>
+      <td>Undeterred by even the most dangerous and thre...</td>
+      <td>Teemo</td>
+      <td>{'name': 'Guerrilla Warfare', 'description': '...</td>
+      <td>{'hp': 528, 'hpperlevel': 90, 'mp': 334, 'mppe...</td>
+      <td>[Marksman, Assassin]</td>
+      <td>{'id': 'BlindingDart', 'name': 'Blinding Dart'...</td>
+      <td>{'id': 'MoveQuick', 'name': 'Move Quick', 'des...</td>
+      <td>{'id': 'ToxicShot', 'name': 'Toxic Shot', 'des...</td>
+      <td>{'id': 'TeemoRCast', 'name': 'Noxious Trap', '...</td>
+      <td>1.0</td>
+      <td>0.527897</td>
+    </tr>
+    <tr>
+      <th>Thresh</th>
+      <td>{'attack': 5, 'defense': 6, 'magic': 6, 'diffi...</td>
+      <td>412</td>
+      <td>Sadistic and cunning, Thresh is an ambitious a...</td>
+      <td>Thresh</td>
+      <td>{'name': 'Damnation', 'description': 'Thresh c...</td>
+      <td>{'hp': 560.52, 'hpperlevel': 93, 'mp': 273.92,...</td>
+      <td>[Support, Fighter]</td>
+      <td>{'id': 'ThreshQ', 'name': 'Death Sentence', 'd...</td>
+      <td>{'id': 'ThreshW', 'name': 'Dark Passage', 'des...</td>
+      <td>{'id': 'ThreshE', 'name': 'Flay', 'description...</td>
+      <td>{'id': 'ThreshRPenta', 'name': 'The Box', 'des...</td>
+      <td>6.5</td>
+      <td>0.500213</td>
+    </tr>
+    <tr>
+      <th>Tristana</th>
+      <td>{'attack': 9, 'defense': 3, 'magic': 5, 'diffi...</td>
+      <td>18</td>
+      <td>While many other yordles channel their energy ...</td>
+      <td>Tristana</td>
+      <td>{'name': 'Draw a Bead', 'description': 'Increa...</td>
+      <td>{'hp': 559, 'hpperlevel': 88, 'mp': 246.76, 'm...</td>
+      <td>[Marksman, Assassin]</td>
+      <td>{'id': 'TristanaQ', 'name': 'Rapid Fire', 'des...</td>
+      <td>{'id': 'TristanaW', 'name': 'Rocket Jump', 'de...</td>
+      <td>{'id': 'TristanaE', 'name': 'Explosive Charge'...</td>
+      <td>{'id': 'TristanaR', 'name': 'Buster Shot', 'de...</td>
+      <td>4.0</td>
+      <td>0.502401</td>
+    </tr>
+    <tr>
+      <th>Trundle</th>
+      <td>{'attack': 7, 'defense': 6, 'magic': 2, 'diffi...</td>
+      <td>48</td>
+      <td>Trundle is a hulking and devious troll with a ...</td>
+      <td>Trundle</td>
+      <td>{'name': 'King's Tribute', 'description': 'Whe...</td>
+      <td>{'hp': 616.28, 'hpperlevel': 96, 'mp': 281.6, ...</td>
+      <td>[Fighter, Tank]</td>
+      <td>{'id': 'TrundleTrollSmash', 'name': 'Chomp', '...</td>
+      <td>{'id': 'trundledesecrate', 'name': 'Frozen Dom...</td>
+      <td>{'id': 'TrundleCircle', 'name': 'Pillar of Ice...</td>
+      <td>{'id': 'TrundlePain', 'name': 'Subjugate', 'de...</td>
+      <td>2.0</td>
+      <td>0.489736</td>
+    </tr>
+    <tr>
+      <th>Tryndamere</th>
+      <td>{'attack': 10, 'defense': 5, 'magic': 2, 'diff...</td>
+      <td>23</td>
+      <td>Fueled by unbridled fury and rage, Tryndamere ...</td>
+      <td>Tryndamere</td>
+      <td>{'name': 'Battle Fury', 'description': 'Trynda...</td>
+      <td>{'hp': 625.64, 'hpperlevel': 98, 'mp': 100, 'm...</td>
+      <td>[Fighter, Assassin]</td>
+      <td>{'id': 'TryndamereQ', 'name': 'Bloodlust', 'de...</td>
+      <td>{'id': 'TryndamereW', 'name': 'Mocking Shout',...</td>
+      <td>{'id': 'TryndamereE', 'name': 'Spinning Slash'...</td>
+      <td>{'id': 'UndyingRage', 'name': 'Undying Rage', ...</td>
+      <td>0.0</td>
+      <td>0.532115</td>
+    </tr>
+    <tr>
+      <th>TwistedFate</th>
+      <td>{'attack': 6, 'defense': 2, 'magic': 6, 'diffi...</td>
+      <td>4</td>
+      <td>Twisted Fate is an infamous cardsharp and swin...</td>
+      <td>Twisted Fate</td>
+      <td>{'name': 'Loaded Dice', 'description': 'Upon k...</td>
+      <td>{'hp': 534, 'hpperlevel': 94, 'mp': 333, 'mppe...</td>
+      <td>[Mage]</td>
+      <td>{'id': 'WildCards', 'name': 'Wild Cards', 'des...</td>
+      <td>{'id': 'PickACard', 'name': 'Pick A Card', 'de...</td>
+      <td>{'id': 'CardmasterStack', 'name': 'Stacked Dec...</td>
+      <td>{'id': 'Destiny', 'name': 'Destiny', 'descript...</td>
+      <td>2.5</td>
+      <td>0.475564</td>
+    </tr>
+    <tr>
+      <th>Twitch</th>
+      <td>{'attack': 9, 'defense': 2, 'magic': 3, 'diffi...</td>
+      <td>29</td>
+      <td>A Zaunite plague rat by birth, but a connoisse...</td>
+      <td>Twitch</td>
+      <td>{'name': 'Deadly Venom', 'description': 'Twitc...</td>
+      <td>{'hp': 582, 'hpperlevel': 84, 'mp': 287.2, 'mp...</td>
+      <td>[Marksman, Assassin]</td>
+      <td>{'id': 'TwitchHideInShadows', 'name': 'Ambush'...</td>
+      <td>{'id': 'TwitchVenomCask', 'name': 'Venom Cask'...</td>
+      <td>{'id': 'TwitchExpunge', 'name': 'Contaminate',...</td>
+      <td>{'id': 'TwitchFullAutomatic', 'name': 'Spray a...</td>
+      <td>0.0</td>
+      <td>0.520720</td>
+    </tr>
+    <tr>
+      <th>Udyr</th>
+      <td>{'attack': 8, 'defense': 7, 'magic': 4, 'diffi...</td>
+      <td>77</td>
+      <td>Udyr is more than a man; he is a vessel for th...</td>
+      <td>Udyr</td>
+      <td>{'name': 'Monkey's Agility', 'description': 'E...</td>
+      <td>{'hp': 593.32, 'hpperlevel': 99, 'mp': 270.4, ...</td>
+      <td>[Fighter, Tank]</td>
+      <td>{'id': 'UdyrTigerStance', 'name': 'Tiger Stanc...</td>
+      <td>{'id': 'UdyrTurtleStance', 'name': 'Turtle Sta...</td>
+      <td>{'id': 'UdyrBearStance', 'name': 'Bear Stance'...</td>
+      <td>{'id': 'UdyrPhoenixStance', 'name': 'Phoenix S...</td>
+      <td>2.5</td>
+      <td>0.541215</td>
+    </tr>
+    <tr>
+      <th>Urgot</th>
+      <td>{'attack': 8, 'defense': 5, 'magic': 3, 'diffi...</td>
+      <td>6</td>
+      <td>Once a powerful Noxian headsman, Urgot was bet...</td>
+      <td>Urgot</td>
+      <td>{'name': 'Echoing Flames', 'description': 'Urg...</td>
+      <td>{'hp': 585, 'hpperlevel': 88, 'mp': 300, 'mppe...</td>
+      <td>[Fighter, Marksman]</td>
+      <td>{'id': 'UrgotQ', 'name': 'Corrosive Charge', '...</td>
+      <td>{'id': 'UrgotW', 'name': 'Purge', 'description...</td>
+      <td>{'id': 'UrgotE', 'name': 'Disdain', 'descripti...</td>
+      <td>{'id': 'UrgotR', 'name': 'Fear Beyond Death', ...</td>
+      <td>6.0</td>
+      <td>0.503470</td>
+    </tr>
+    <tr>
+      <th>Varus</th>
+      <td>{'attack': 7, 'defense': 3, 'magic': 4, 'diffi...</td>
+      <td>110</td>
+      <td>One of the ancient darkin, Varus was a deadly ...</td>
+      <td>Varus</td>
+      <td>{'name': 'Living Vengeance', 'description': 'O...</td>
+      <td>{'hp': 499, 'hpperlevel': 89, 'mp': 360.48, 'm...</td>
+      <td>[Marksman, Mage]</td>
+      <td>{'id': 'VarusQ', 'name': 'Piercing Arrow', 'de...</td>
+      <td>{'id': 'VarusW', 'name': 'Blighted Quiver', 'd...</td>
+      <td>{'id': 'VarusE', 'name': 'Hail of Arrows', 'de...</td>
+      <td>{'id': 'VarusR', 'name': 'Chain of Corruption'...</td>
+      <td>2.0</td>
+      <td>0.460139</td>
+    </tr>
+    <tr>
+      <th>Vayne</th>
+      <td>{'attack': 10, 'defense': 1, 'magic': 1, 'diff...</td>
+      <td>67</td>
+      <td>Shauna Vayne is a deadly, remorseless Demacian...</td>
+      <td>Vayne</td>
+      <td>{'name': 'Night Hunter', 'description': 'Vayne...</td>
+      <td>{'hp': 515, 'hpperlevel': 89, 'mp': 231.8, 'mp...</td>
+      <td>[Marksman, Assassin]</td>
+      <td>{'id': 'VayneTumble', 'name': 'Tumble', 'descr...</td>
+      <td>{'id': 'VayneSilveredBolts', 'name': 'Silver B...</td>
+      <td>{'id': 'VayneCondemn', 'name': 'Condemn', 'des...</td>
+      <td>{'id': 'VayneInquisition', 'name': 'Final Hour...</td>
+      <td>3.0</td>
+      <td>0.494789</td>
+    </tr>
+    <tr>
+      <th>Veigar</th>
+      <td>{'attack': 2, 'defense': 2, 'magic': 10, 'diff...</td>
+      <td>45</td>
+      <td>An enthusiastic master of dark sorcery, Veigar...</td>
+      <td>Veigar</td>
+      <td>{'name': 'Phenomenal Evil Power', 'description...</td>
+      <td>{'hp': 505, 'hpperlevel': 94, 'mp': 490, 'mppe...</td>
+      <td>[Mage]</td>
+      <td>{'id': 'VeigarBalefulStrike', 'name': 'Baleful...</td>
+      <td>{'id': 'VeigarDarkMatter', 'name': 'Dark Matte...</td>
+      <td>{'id': 'VeigarEventHorizon', 'name': 'Event Ho...</td>
+      <td>{'id': 'VeigarR', 'name': 'Primordial Burst', ...</td>
+      <td>2.5</td>
+      <td>0.524218</td>
+    </tr>
+    <tr>
+      <th>Velkoz</th>
+      <td>{'attack': 2, 'defense': 2, 'magic': 10, 'diff...</td>
+      <td>161</td>
+      <td>It is unclear if Vel'Koz was the first Void-sp...</td>
+      <td>Vel'Koz</td>
+      <td>{'name': 'Organic Deconstruction', 'descriptio...</td>
+      <td>{'hp': 520, 'hpperlevel': 88, 'mp': 469, 'mppe...</td>
+      <td>[Mage]</td>
+      <td>{'id': 'VelkozQ', 'name': 'Plasma Fission', 'd...</td>
+      <td>{'id': 'VelkozW', 'name': 'Void Rift', 'descri...</td>
+      <td>{'id': 'VelkozE', 'name': 'Tectonic Disruption...</td>
+      <td>{'id': 'VelkozR', 'name': 'Life Form Disintegr...</td>
+      <td>5.0</td>
+      <td>0.527172</td>
+    </tr>
+    <tr>
+      <th>Vi</th>
+      <td>{'attack': 8, 'defense': 5, 'magic': 3, 'diffi...</td>
+      <td>254</td>
+      <td>Once a criminal from the mean streets of Zaun,...</td>
+      <td>Vi</td>
+      <td>{'name': 'Blast Shield', 'description': 'Vi ch...</td>
+      <td>{'hp': 585, 'hpperlevel': 85, 'mp': 295, 'mppe...</td>
+      <td>[Fighter, Assassin]</td>
+      <td>{'id': 'ViQ', 'name': 'Vault Breaker', 'descri...</td>
+      <td>{'id': 'ViW', 'name': 'Denting Blows', 'descri...</td>
+      <td>{'id': 'ViE', 'name': 'Excessive Force', 'desc...</td>
+      <td>{'id': 'ViR', 'name': 'Assault and Battery', '...</td>
+      <td>6.0</td>
+      <td>0.530029</td>
+    </tr>
+    <tr>
+      <th>Viktor</th>
+      <td>{'attack': 2, 'defense': 4, 'magic': 10, 'diff...</td>
+      <td>112</td>
+      <td>The herald of a new age of technology, Viktor ...</td>
+      <td>Viktor</td>
+      <td>{'name': 'Glorious Evolution', 'description': ...</td>
+      <td>{'hp': 528.04, 'hpperlevel': 90, 'mp': 405, 'm...</td>
+      <td>[Mage]</td>
+      <td>{'id': 'ViktorPowerTransfer', 'name': 'Siphon ...</td>
+      <td>{'id': 'ViktorGravitonField', 'name': 'Gravity...</td>
+      <td>{'id': 'ViktorDeathRay', 'name': 'Death Ray', ...</td>
+      <td>{'id': 'ViktorChaosStorm', 'name': 'Chaos Stor...</td>
+      <td>3.5</td>
+      <td>0.484197</td>
+    </tr>
+    <tr>
+      <th>Vladimir</th>
+      <td>{'attack': 2, 'defense': 6, 'magic': 8, 'diffi...</td>
+      <td>8</td>
+      <td>A fiend with a thirst for mortal blood, Vladim...</td>
+      <td>Vladimir</td>
+      <td>{'name': 'Crimson Pact', 'description': 'Every...</td>
+      <td>{'hp': 537, 'hpperlevel': 96, 'mp': 2, 'mpperl...</td>
+      <td>[Mage, Tank]</td>
+      <td>{'id': 'VladimirQ', 'name': 'Transfusion', 'de...</td>
+      <td>{'id': 'VladimirSanguinePool', 'name': 'Sangui...</td>
+      <td>{'id': 'VladimirE', 'name': 'Tides of Blood', ...</td>
+      <td>{'id': 'VladimirHemoplague', 'name': 'Hemoplag...</td>
+      <td>2.0</td>
+      <td>0.487122</td>
+    </tr>
+    <tr>
+      <th>Volibear</th>
+      <td>{'attack': 7, 'defense': 7, 'magic': 4, 'diffi...</td>
+      <td>106</td>
+      <td>The thunderous demigod known as the Thousand-P...</td>
+      <td>Volibear</td>
+      <td>{'name': 'Chosen of the Storm', 'description':...</td>
+      <td>{'hp': 584.48, 'hpperlevel': 86, 'mp': 270.4, ...</td>
+      <td>[Fighter, Tank]</td>
+      <td>{'id': 'VolibearQ', 'name': 'Rolling Thunder',...</td>
+      <td>{'id': 'VolibearW', 'name': 'Frenzy', 'descrip...</td>
+      <td>{'id': 'VolibearE', 'name': 'Majestic Roar', '...</td>
+      <td>{'id': 'VolibearR', 'name': 'Thunder Claws', '...</td>
+      <td>3.0</td>
+      <td>0.529880</td>
+    </tr>
+    <tr>
+      <th>Warwick</th>
+      <td>{'attack': 9, 'defense': 5, 'magic': 3, 'diffi...</td>
+      <td>19</td>
+      <td>Warwick is a monster who hunts the gray alleys...</td>
+      <td>Warwick</td>
+      <td>{'name': 'Eternal Hunger', 'description': 'War...</td>
+      <td>{'hp': 550, 'hpperlevel': 85, 'mp': 280, 'mppe...</td>
+      <td>[Fighter, Tank]</td>
+      <td>{'id': 'WarwickQ', 'name': 'Jaws of the Beast'...</td>
+      <td>{'id': 'WarwickW', 'name': 'Blood Hunt', 'desc...</td>
+      <td>{'id': 'WarwickE', 'name': 'Primal Howl', 'des...</td>
+      <td>{'id': 'WarwickR', 'name': 'Infinite Duress', ...</td>
+      <td>0.0</td>
+      <td>0.511856</td>
+    </tr>
+    <tr>
+      <th>MonkeyKing</th>
+      <td>{'attack': 8, 'defense': 5, 'magic': 2, 'diffi...</td>
+      <td>62</td>
+      <td>Wukong is a vastayan trickster who uses his st...</td>
+      <td>Wukong</td>
+      <td>{'name': 'Stone Skin', 'description': 'Increas...</td>
+      <td>{'hp': 577.8, 'hpperlevel': 85, 'mp': 265.84, ...</td>
+      <td>[Fighter, Tank]</td>
+      <td>{'id': 'MonkeyKingDoubleAttack', 'name': 'Crus...</td>
+      <td>{'id': 'MonkeyKingDecoy', 'name': 'Decoy', 'de...</td>
+      <td>{'id': 'MonkeyKingNimbus', 'name': 'Nimbus Str...</td>
+      <td>{'id': 'MonkeyKingSpinToWin', 'name': 'Cyclone...</td>
+      <td>3.0</td>
+      <td>0.515656</td>
+    </tr>
+    <tr>
+      <th>Xayah</th>
+      <td>{'attack': 10, 'defense': 6, 'magic': 1, 'diff...</td>
+      <td>498</td>
+      <td>Deadly and precise, Xayah is a vastayan revolu...</td>
+      <td>Xayah</td>
+      <td>{'name': 'Clean Cuts', 'description': 'After u...</td>
+      <td>{'hp': 561, 'hpperlevel': 86, 'mp': 340, 'mppe...</td>
+      <td>[Marksman]</td>
+      <td>{'id': 'XayahQ', 'name': 'Double Daggers', 'de...</td>
+      <td>{'id': 'XayahW', 'name': 'Deadly Plumage', 'de...</td>
+      <td>{'id': 'XayahE', 'name': 'Bladecaller', 'descr...</td>
+      <td>{'id': 'XayahR', 'name': 'Featherstorm', 'desc...</td>
+      <td>0.0</td>
+      <td>0.487522</td>
+    </tr>
+    <tr>
+      <th>Xerath</th>
+      <td>{'attack': 1, 'defense': 3, 'magic': 10, 'diff...</td>
+      <td>101</td>
+      <td>Xerath is an Ascended Magus of ancient Shurima...</td>
+      <td>Xerath</td>
+      <td>{'name': 'Mana Surge', 'description': 'Xerath'...</td>
+      <td>{'hp': 526, 'hpperlevel': 92, 'mp': 459, 'mppe...</td>
+      <td>[Mage, Assassin]</td>
+      <td>{'id': 'XerathArcanopulseChargeUp', 'name': 'A...</td>
+      <td>{'id': 'XerathArcaneBarrage2', 'name': 'Eye of...</td>
+      <td>{'id': 'XerathMageSpear', 'name': 'Shocking Or...</td>
+      <td>{'id': 'XerathLocusOfPower2', 'name': 'Rite of...</td>
+      <td>3.5</td>
+      <td>0.524876</td>
+    </tr>
+    <tr>
+      <th>XinZhao</th>
+      <td>{'attack': 8, 'defense': 6, 'magic': 3, 'diffi...</td>
+      <td>5</td>
+      <td>Xin Zhao is a resolute warrior loyal to the ru...</td>
+      <td>Xin Zhao</td>
+      <td>{'name': 'Determination', 'description': 'Ever...</td>
+      <td>{'hp': 570, 'hpperlevel': 92, 'mp': 273.8, 'mp...</td>
+      <td>[Fighter, Assassin]</td>
+      <td>{'id': 'XinZhaoQ', 'name': 'Three Talon Strike...</td>
+      <td>{'id': 'XinZhaoW', 'name': 'Wind Becomes Light...</td>
+      <td>{'id': 'XinZhaoE', 'name': 'Audacious Charge',...</td>
+      <td>{'id': 'XinZhaoR', 'name': 'Crescent Guard', '...</td>
+      <td>8.0</td>
+      <td>0.515086</td>
+    </tr>
+    <tr>
+      <th>Yasuo</th>
+      <td>{'attack': 8, 'defense': 4, 'magic': 4, 'diffi...</td>
+      <td>157</td>
+      <td>An Ionian of deep resolve, Yasuo is an agile s...</td>
+      <td>Yasuo</td>
+      <td>{'name': 'Way of the Wanderer', 'description':...</td>
+      <td>{'hp': 523, 'hpperlevel': 87, 'mp': 100, 'mppe...</td>
+      <td>[Fighter, Assassin]</td>
+      <td>{'id': 'YasuoQ1Wrapper', 'name': 'Steel Tempes...</td>
+      <td>{'id': 'YasuoW', 'name': 'Wind Wall', 'descrip...</td>
+      <td>{'id': 'YasuoE', 'name': 'Sweeping Blade', 'de...</td>
+      <td>{'id': 'YasuoR', 'name': 'Last Breath', 'descr...</td>
+      <td>3.0</td>
+      <td>0.514543</td>
+    </tr>
+    <tr>
+      <th>Yorick</th>
+      <td>{'attack': 6, 'defense': 6, 'magic': 4, 'diffi...</td>
+      <td>83</td>
+      <td>The last survivor of a long-forgotten religiou...</td>
+      <td>Yorick</td>
+      <td>{'name': 'Shepherd of Souls', 'description': '...</td>
+      <td>{'hp': 580, 'hpperlevel': 100, 'mp': 300, 'mpp...</td>
+      <td>[Fighter, Tank]</td>
+      <td>{'id': 'YorickQ', 'name': 'Last Rites', 'descr...</td>
+      <td>{'id': 'YorickW', 'name': 'Dark Procession', '...</td>
+      <td>{'id': 'YorickE', 'name': 'Mourning Mist', 'de...</td>
+      <td>{'id': 'YorickR', 'name': 'Eulogy of the Isles...</td>
+      <td>1.0</td>
+      <td>0.520325</td>
+    </tr>
+    <tr>
+      <th>Zac</th>
+      <td>{'attack': 3, 'defense': 7, 'magic': 7, 'diffi...</td>
+      <td>154</td>
+      <td>Zac is the product of a toxic spill that ran t...</td>
+      <td>Zac</td>
+      <td>{'name': 'Cell Division', 'description': 'Each...</td>
+      <td>{'hp': 615, 'hpperlevel': 95, 'mp': 0, 'mpperl...</td>
+      <td>[Tank, Fighter]</td>
+      <td>{'id': 'ZacQ', 'name': 'Stretching Strikes', '...</td>
+      <td>{'id': 'ZacW', 'name': 'Unstable Matter', 'des...</td>
+      <td>{'id': 'ZacE', 'name': 'Elastic Slingshot', 'd...</td>
+      <td>{'id': 'ZacR', 'name': 'Let's Bounce!', 'descr...</td>
+      <td>7.0</td>
+      <td>0.515332</td>
+    </tr>
+    <tr>
+      <th>Zed</th>
+      <td>{'attack': 9, 'defense': 2, 'magic': 1, 'diffi...</td>
+      <td>238</td>
+      <td>Utterly ruthless and without mercy, Zed is the...</td>
+      <td>Zed</td>
+      <td>{'name': 'Contempt for the Weak', 'description...</td>
+      <td>{'hp': 584, 'hpperlevel': 85, 'mp': 200, 'mppe...</td>
+      <td>[Assassin, Fighter]</td>
+      <td>{'id': 'ZedQ', 'name': 'Razor Shuriken', 'desc...</td>
+      <td>{'id': 'ZedW', 'name': 'Living Shadow', 'descr...</td>
+      <td>{'id': 'ZedE', 'name': 'Shadow Slash', 'descri...</td>
+      <td>{'id': 'ZedR', 'name': 'Death Mark', 'descript...</td>
+      <td>1.0</td>
+      <td>0.487672</td>
+    </tr>
+    <tr>
+      <th>Ziggs</th>
+      <td>{'attack': 2, 'defense': 4, 'magic': 9, 'diffi...</td>
+      <td>115</td>
+      <td>With a love of big bombs and short fuses, the ...</td>
+      <td>Ziggs</td>
+      <td>{'name': 'Short Fuse', 'description': 'Every 1...</td>
+      <td>{'hp': 536, 'hpperlevel': 92, 'mp': 480, 'mppe...</td>
+      <td>[Mage]</td>
+      <td>{'id': 'ZiggsQ', 'name': 'Bouncing Bomb', 'des...</td>
+      <td>{'id': 'ZiggsW', 'name': 'Satchel Charge', 'de...</td>
+      <td>{'id': 'ZiggsE', 'name': 'Hexplosive Minefield...</td>
+      <td>{'id': 'ZiggsR', 'name': 'Mega Inferno Bomb', ...</td>
+      <td>4.0</td>
+      <td>0.529169</td>
+    </tr>
+    <tr>
+      <th>Zilean</th>
+      <td>{'attack': 2, 'defense': 5, 'magic': 8, 'diffi...</td>
+      <td>26</td>
+      <td>Once a powerful Icathian mage, Zilean became o...</td>
+      <td>Zilean</td>
+      <td>{'name': 'Time in a Bottle', 'description': 'Z...</td>
+      <td>{'hp': 504, 'hpperlevel': 82, 'mp': 452, 'mppe...</td>
+      <td>[Support, Mage]</td>
+      <td>{'id': 'ZileanQ', 'name': 'Time Bomb', 'descri...</td>
+      <td>{'id': 'ZileanW', 'name': 'Rewind', 'descripti...</td>
+      <td>{'id': 'TimeWarp', 'name': 'Time Warp', 'descr...</td>
+      <td>{'id': 'ChronoShift', 'name': 'Chronoshift', '...</td>
+      <td>3.5</td>
+      <td>0.516116</td>
+    </tr>
+    <tr>
+      <th>Zoe</th>
+      <td>{'attack': 1, 'defense': 7, 'magic': 8, 'diffi...</td>
+      <td>142</td>
+      <td>As the embodiment of mischief, imagination, an...</td>
+      <td>Zoe</td>
+      <td>{'name': 'More Sparkles!', 'description': 'Zoe...</td>
+      <td>{'hp': 560, 'hpperlevel': 92, 'mp': 425, 'mppe...</td>
+      <td>[Mage, Support]</td>
+      <td>{'id': 'ZoeQ', 'name': 'Paddle Star!', 'descri...</td>
+      <td>{'id': 'ZoeW', 'name': 'Spell Thief', 'descrip...</td>
+      <td>{'id': 'ZoeE', 'name': 'Sleepy Trouble Bubble'...</td>
+      <td>{'id': 'ZoeR', 'name': 'Portal Jump', 'descrip...</td>
+      <td>0.0</td>
+      <td>0.449757</td>
+    </tr>
+    <tr>
+      <th>Zyra</th>
+      <td>{'attack': 4, 'defense': 3, 'magic': 8, 'diffi...</td>
+      <td>143</td>
+      <td>Born in an ancient, sorcerous catastrophe, Zyr...</td>
+      <td>Zyra</td>
+      <td>{'name': 'Garden of Thorns', 'description': 'S...</td>
+      <td>{'hp': 504, 'hpperlevel': 79, 'mp': 418, 'mppe...</td>
+      <td>[Mage, Support]</td>
+      <td>{'id': 'ZyraQ', 'name': 'Deadly Spines', 'desc...</td>
+      <td>{'id': 'ZyraW', 'name': 'Rampant Growth', 'des...</td>
+      <td>{'id': 'ZyraE', 'name': 'Grasping Roots', 'des...</td>
+      <td>{'id': 'ZyraR', 'name': 'Stranglethorns', 'des...</td>
+      <td>4.0</td>
+      <td>0.542984</td>
+    </tr>
+  </tbody>
+</table>
+<p>142 rows × 13 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[187]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;CC Score&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;winRate&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ChampionsData</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[187]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f4eef824f28&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
 </div>
 
 </div>
